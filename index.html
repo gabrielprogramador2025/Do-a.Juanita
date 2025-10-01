@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Doña Juanita</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #6b0f1a;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 2em;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 1.5em;
+      padding: 0.7em 1.5em;
+      background-color: #6b0f1a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #9a1f2a;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Feedback Constructivo - Doña Juanita</h1>
+    <p>Sistema formal y seguro para resolución constructiva de tensiones entre pares</p>
+  </header>
+
+  <!-- 🚀 FORMULARIO FORMspree -->
+  <form id="feedbackForm" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+    <label for="reviewer">Quien da el feedback (opcional/anónimo):</label>
+    <input type="text" id="reviewer" name="reviewer" placeholder="Ejemplo: Anónimo" />
+
+    <label for="reviewee">Para quién es el feedback:</label>
+    <input type="text" id="reviewee" name="reviewee" required />
+
+    <label for="categoria">Categoría del feedback:</label>
+    <select id="categoria" name="categoria" required>
+      <option value="colaboracion">Colaboración</option>
+      <option value="comunicacion">Comunicación</option>
+      <option value="responsabilidad">Responsabilidad</option>
+      <option value="resolucion">Resolución de conflictos</option>
+    </select>
+
+    <label for="calificacion">Impacto (1 = muy bajo, 5 = muy alto):</label>
+    <select id="calificacion" name="calificacion" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <label for="sbi_situacion">Situación (¿Dónde/cuándo ocurrió?):</label>
+    <textarea id="sbi_situacion" name="sbi_situacion" rows="2" required></textarea>
+
+    <label for="sbi_comportamiento">Comportamiento observado:</label>
+    <textarea id="sbi_comportamiento" name="sbi_comportamiento" rows="2" required></textarea>
+
+    <label for="sbi_impacto">Impacto generado:</label>
+    <textarea id="sbi_impacto" name="sbi_impacto" rows="2" required></textarea>
+
+    <label for="sugerencia">Sugerencia constructiva (¿Cómo mejorarlo?):</label>
+    <textarea id="sugerencia" name="sugerencia" rows="2"></textarea>
+
+    <label for="accion">Acción concreta a futuro:</label>
+    <textarea id="accion" name="accion" rows="2"></textarea>
+
+    <button type="submit">Enviar Feedback</button>
+    <p class="note">La información enviada será confidencial y utilizada únicamente para mejorar el ambiente laboral en Doña Juanita.</p>
+  </form>
+
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(){
+      alert("✅ Gracias por tu feedback. Será tratado de forma confidencial.");
+    });
+  </script>
+</body>
+</html>
